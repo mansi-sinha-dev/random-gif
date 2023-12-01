@@ -1,10 +1,10 @@
-import axios from 'axios';
-import React, { useEffect } from 'react'
-import { useState } from 'react';
+
+import React from 'react'
+
 import Spinner from './Spinner';
 import useGif from '../hooks/useGif';
 
-const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
+// const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
 const Random = () => {
   
@@ -16,7 +16,7 @@ const Random = () => {
         <h1 className=' underline uppercase font-bold mt-4 text-xl md:text-2xl text-center'>A Random Gif</h1>
 
         {
-          loading ? (<Spinner/>) : (<img src={gif} className=" max-w-[30rem] px-4 object-contain" />)
+          loading ? (<Spinner/>) : (<img src={gif}  alt=" gif" className=" max-w-[30rem] px-4 object-contain" />)
         }
 
         <button onClick={() =>fetchData()}

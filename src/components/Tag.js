@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Spinner from './Spinner';
 import useGif from '../hooks/useGif';
 
-const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
+// const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
 const Tag = () => {
     
@@ -18,7 +18,7 @@ const Tag = () => {
         <h1 className=' underline uppercase font-bold mt-4 text-xl md:text-2xl text-center'>Random <span>{tag}</span> Gif</h1>
 
         {
-          loading ? (<Spinner/>) : (<img src={gif} className=" max-w-[30rem] px-4 py-4 object-contain" />)
+          loading ? (<Spinner/>) : (<img src={gif} alt='gif' className=" max-w-[30rem] px-4 py-4 object-contain" />)
         }
 
         <input className=' w-4/5 bg-white font-semibold text-center my-2 rounded-lg py-2 mb-2'
