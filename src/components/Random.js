@@ -6,9 +6,9 @@ import useGif from '../hooks/useGif';
 
 // const API_KEY = process.env.REACT_APP_GIPHY_API_KEY;
 
-const Random = () => {
+const Random = (tag) => {
   
-    const {gif, loading,fetchData} = useGif();
+    const {gif, loading,fetchData} = useGif(tag);
 
     
   return (
